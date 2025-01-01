@@ -61,16 +61,9 @@ const fetcher = (variables, token) => {
  * Fetch top languages for a given username.
  *
  * @param {string} username GitHub username.
-<<<<<<< HEAD
- * @param {string[]} exclude_repo List of repositories to exclude.
- * @param {number} size_weight Weightage to be given to size.
- * @param {number} count_weight Weightage to be given to count.
- * @returns {Promise<TopLangData>} Top languages data.
-=======
  * @param {string[]} exclude_repo List of repositories to exclude. Default: [].
  * @param {string[]} ownerAffiliations The owner affiliations to filter by. Default: OWNER.
  * @returns {Promise<import("./types").TopLangData>} Top languages data.
->>>>>>> rickstaa-add_role_param
  */
 const fetchTopLanguages = async (
   username,
@@ -79,14 +72,8 @@ const fetchTopLanguages = async (
   count_weight = 0,
   ownerAffiliations = [],
 ) => {
-<<<<<<< HEAD
-  if (!username) {
-    throw new MissingParamError(["username"]);
-  }
-=======
   if (!username) throw new MissingParamError(["username"]);
   ownerAffiliations = parseOwnerAffiliations(ownerAffiliations);
->>>>>>> rickstaa-add_role_param
 
   const res = await retryer(fetcher, { login: username, ownerAffiliations });
 
