@@ -476,8 +476,6 @@ const CONSTANTS = {
   ERROR_CACHE_SECONDS: TEN_MINUTES,
 };
 
-<<<<<<< HEAD
-=======
 const OWNER_AFFILIATIONS = ["OWNER", "COLLABORATOR", "ORGANIZATION_MEMBER"];
 
 const SECONDARY_ERROR_MESSAGES = {
@@ -513,7 +511,6 @@ class CustomError extends Error {
   static INVALID_AFFILIATION = "INVALID_AFFILIATION";
 }
 
->>>>>>> rickstaa-add_role_param
 /**
  * Missing query parameter class.
  */
